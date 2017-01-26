@@ -16,20 +16,38 @@
 		</div>
 		<div class="main" ng-controller="MainController">
 				<div class="container">
+					<div class="separator">
 						<h1>{{ title }} </h1>
 						<h2>Playing with Angular...</h2>
 						<h3>{{ promo }} </h3>
 						<input type="text" ng-model="favoriteGame" />
 						<p>Game: - {{favoriteGame}}</p>
-						<div class="form">
-								<input type="radio" value="IronMan" ng-model="favoriteSuperhero" /> IronMan
+						</div>
+						<div class="separator">
+							<form class="form navbar-form">
+								<input type="radio" value="IronMan" ng-model="favoriteSuperhero"/> IronMan
 								<input type="radio" value="CaptainAmerica" ng-model="favoriteSuperhero" /> CaptainAmerica
 								<input type="radio" value="Hulk" ng-model="favoriteSuperhero" /> Hulk
 								<input type="radio" value="Thor" ng-model="favoriteSuperhero" /> Thor
-								<p> -> {{favoriteSuperhero}} </p>
+								<p class="bold"> -> {{favoriteSuperhero}} </p>
 								<input type="text" ng-model="value" />
 								<span ng-class="{bold: isBold(), italic: isItalic(), underline: isUnderlined(), funkyTime: isFunky()}"> => Example Text - {{funky}}</span>
+								</form>
 						</div>
+						<div class="separator">
+								<table class="table table-hover">
+										<thead>
+												<tr ng-repeat="country in countries">
+														<td>{{country.id}}</td>
+														<td>{{country.name}}</td>
+														<td>{{country.population}}</td>
+														<td>{{country.cont}}</td>
+												</tr>
+										</thead>
+										<tbody>
+										</tbody>
+								</table>
+							</div>
 				</div>
 		</div>
 		<!-- Modules -->
