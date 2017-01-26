@@ -3,6 +3,7 @@
 
 <head>
 		<link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/main.css">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 </head>
@@ -15,16 +16,19 @@
 		</div>
 		<div class="main" ng-controller="MainController">
 				<div class="container">
-						<h1>{{ title }}</h1>
-						<h2>{{ promo }}</h2>
+						<h1>{{ title }} </h1>
+						<h2>Playing with Angular...</h2>
+						<h3>{{ promo }} </h3>
 						<input type="text" ng-model="favoriteGame" />
 						<p>Game: - {{favoriteGame}}</p>
 						<div class="form">
-								<input type="radio" value="IronMan" ng-model="favoriteSuperhero"/> IronMan
-								<input type="radio" value="CaptainAmerica" ng-model="favoriteSuperhero"/> CaptainAmerica
-								<input type="radio" value="Hulk" ng-model="favoriteSuperhero"/> Hulk
-								<input type="radio" value="Thor" ng-model="favoriteSuperhero"/> Thor
+								<input type="radio" value="IronMan" ng-model="favoriteSuperhero" /> IronMan
+								<input type="radio" value="CaptainAmerica" ng-model="favoriteSuperhero" /> CaptainAmerica
+								<input type="radio" value="Hulk" ng-model="favoriteSuperhero" /> Hulk
+								<input type="radio" value="Thor" ng-model="favoriteSuperhero" /> Thor
 								<p> -> {{favoriteSuperhero}} </p>
+								<input type="text" ng-model="value" />
+								<span ng-class="{bold: isBold(), italic: isItalic(), underline: isUnderlined(), funkyTime: isFunky()}"> => Example Text - {{funky}}</span>
 						</div>
 				</div>
 		</div>
