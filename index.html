@@ -12,10 +12,12 @@
 		<div class="header">
 				<div class="container">
 						<h1>Angular Things...🤓</h1>
+						<div ng-controller="webDev"><p> Made by and for: {{myJob}}</p></div>
 				</div>
 		</div>
 		<div class="main" ng-controller="MainController">
-				<div class="container"> <h3> User: {{myName}} </h3>
+				<div class="container"> 
+					<h3> User: {{myName}} </h3>
 						<div class="separator">
 								<h1>{{ title }} </h1>
 								<h2>Playing with Angular...</h2>
@@ -51,7 +53,7 @@
 						</div>
 				</div>
 		</div>
-		<div class="separator" ng-controller="secondController">
+		<div class="separator footer" ng-controller="secondController">
 				<div>
 						<input type="checkbox" ng-model="isFirstElementVisible" /> Is first element visible</div>
 				<div>
@@ -59,8 +61,11 @@
 				<div ng-show="isFirstElementVisible">First Element</div>
 				<div ng-if="isSecondElementVisible">Second Element</div>
 		</div>
+
 		<!-- Modules -->
 		<script src="js/app.js"></script>
+		<!-- services -->
+		<script src="js/services.js"></script>
 		<!-- Controllers -->
 		<script src="js/MainController.js"></script>
 </body>
