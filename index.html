@@ -11,27 +11,28 @@
 <body>
 		<div class="header">
 				<div class="container">
-						<h1>Book End</h1>
+						<h1>Angular Things...🤓</h1>
 				</div>
 		</div>
 		<div class="main" ng-controller="MainController">
-				<div class="container">
-					<div class="separator">
-						<h1>{{ title }} </h1>
-						<h2>Playing with Angular...</h2>
-						<h3>{{ promo }} </h3>
-						<input type="text" ng-model="favoriteGame" />
-						<p>Game: - {{favoriteGame}}</p>
+				<div class="container"> <h3> User: {{myName}} </h3>
+						<div class="separator">
+								<h1>{{ title }} </h1>
+								<h2>Playing with Angular...</h2>
+								<h3>{{ promo }} </h3>
+
+								<input type="text" ng-model="favoriteGame" />
+								<p>Game: - {{favoriteGame}}</p>
 						</div>
 						<div class="separator">
-							<form class="form navbar-form">
-								<input type="radio" value="IronMan" ng-model="favoriteSuperhero"/> IronMan
-								<input type="radio" value="CaptainAmerica" ng-model="favoriteSuperhero" /> CaptainAmerica
-								<input type="radio" value="Hulk" ng-model="favoriteSuperhero" /> Hulk
-								<input type="radio" value="Thor" ng-model="favoriteSuperhero" /> Thor
-								<p class="bold"> -> {{favoriteSuperhero}} </p>
-								<input type="text" ng-model="value" />
-								<span ng-class="{bold: isBold(), italic: isItalic(), underline: isUnderlined(), funkyTime: isFunky()}"> => Example Text - {{funky}}</span>
+								<form class="form navbar-form">
+										<input type="radio" value="IronMan" ng-model="favoriteSuperhero" /> IronMan
+										<input type="radio" value="CaptainAmerica" ng-model="favoriteSuperhero" /> CaptainAmerica
+										<input type="radio" value="Hulk" ng-model="favoriteSuperhero" /> Hulk
+										<input type="radio" value="Thor" ng-model="favoriteSuperhero" /> Thor
+										<p class="bold"> -> {{favoriteSuperhero}} </p>
+										<input type="text" ng-model="value" />
+										<span ng-class="{bold: isBold(), italic: isItalic(), underline: isUnderlined(), funkyTime: isFunky()}"> => Example Text - {{funky}}</span>
 								</form>
 						</div>
 						<div class="separator">
@@ -47,8 +48,16 @@
 										<tbody>
 										</tbody>
 								</table>
-							</div>
+						</div>
 				</div>
+		</div>
+		<div class="separator" ng-controller="secondController">
+				<div>
+						<input type="checkbox" ng-model="isFirstElementVisible" /> Is first element visible</div>
+				<div>
+						<input type="checkbox" ng-model="isSecondElementVisible" /> Is second element visible</div>
+				<div ng-show="isFirstElementVisible">First Element</div>
+				<div ng-if="isSecondElementVisible">Second Element</div>
 		</div>
 		<!-- Modules -->
 		<script src="js/app.js"></script>
