@@ -1,4 +1,4 @@
-var app = angular.module("myApp", ["services"]);
+var app = angular.module("myApp", ["Services"]);
 app.value('myName', "Alex");
 
 app.controller("webDev", ["$scope", "job", function($scope, job){
@@ -51,6 +51,15 @@ app.controller('secondController', function($scope) {
 	$scope.isSecondElementVisible = true;
 
 });
+// call to factory in services.js for do stuff
+app.controller('numCatch', function ($scope, MyFactory) {
+	$scope.calc = function(){
+		$scope.num = MyFactory.toCalculate($scope.num)
+	}
+});
+
+//---------------------------------
+
 
 
 
